@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherwin Estrada - Web Dev Portfolio</title>
+    
+    <!-- Favicon for browser tab icon -->
+    <link rel="icon" type="image/svg+xml" href="assets/S_Logo.svg">
+    
+    <!-- Bootstrap CSS framework for responsive grid and components -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons for consistent iconography -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Custom stylesheet with theme variables and portfolio-specific styles -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVIGATION HEADER ===== -->
+    <!-- Fixed navigation bar with responsive design and theme toggle -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Brand logo with smooth scroll to home section -->
+            <a class="navbar-brand fw-bold" href="#home">
+                <img src="assets/S_Logo.svg" alt="Portfolio Logo" height="32" class="d-inline-block align-text-top">
+            </a>
+            
+            <!-- Mobile hamburger menu toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Main navigation menu with smooth scroll links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Dark/Light mode toggle switch with animated icons -->
+                <div class="theme-toggle-container">
+                    <input type="checkbox" id="darkModeToggle" class="theme-toggle-input" aria-label="Toggle dark mode">
+                    <label for="darkModeToggle" class="theme-toggle-label">
+                        <span class="theme-toggle-slider">
+                            <i class="bi bi-sun-fill theme-icon sun-icon" id="sunIcon"></i>
+                            <i class="bi bi-moon-fill theme-icon moon-icon" id="moonIcon"></i>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <!-- Main landing section with introduction and call-to-action buttons -->
+    <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <!-- Main heading with developer name -->
+                    <h1 class="display-2 fw-bold mb-3">Sherwin Estrada</h1>
+                    <!-- Professional title/role -->
+                    <h2 class="h3 mb-4 text-muted">Web Developer</h2>
+
+                    <!-- Brief description of skills and approach -->
+                    <p class="lead mb-5">Computer Science Graduate at University of the Cordilleras</p>
+                    
+                    <!-- Primary action buttons for resume download and contact -->
+                    <a href="assets/Estrada_Sherwin - Resume.pdf" class="btn btn-dark btn-lg me-3" download>Resume</a>
+                    <a href="#contact" class="btn btn-outline-dark btn-lg">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <!-- Personal introduction with skills overview and professional photo -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left column: Personal introduction and skills -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">About Me</h2>
+                    <!-- Personal introduction paragraph -->
+                    <p class="lead mb-4">
+                        Hey there! I'm Sherwin, a Web Developer who loves bringing ideas to life on the web. I enjoy working with HTML, CSS, JavaScript, Bootstrap, and React to create fast, responsive, and user-friendly websites.
+                    </p>
+                    <!-- Background and interests paragraph -->
+                    <p class="mb-4">
+                        My web dev journey started with school projects, and since then I've been hooked on building cool things online and experimenting with different designs and layouts. I'm always excited to take on new challenges, collaborate with teams, and keep learning along the way.
+When I'm not coding, you'll probably find me into esports coaching, trying out new design tools, or checking out the latest trends in tech.
+                    </p>
+                    <!-- Technical skills organized by category -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5>Frontend</h5>
+                            <ul class="list-unstyled">
+                                <li>• HTML5 & CSS3</li>
+                                <li>• JavaScript (ES6+)</li>
+                                <li>• React & Vue.js</li>
+                                <li>• Bootstrap & Tailwind</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>Backend</h5>
+                            <ul class="list-unstyled">
+                                <li>• Node.js & Express</li>
+                                <li>• Python & Django</li>
+                                <li>• MongoDB & PostgreSQL</li>
+                                <li>• RESTful APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right column: Professional photo with animated border -->
+                <div class="col-lg-6 text-center">
+                    <div class="profile-image-container">
+                        <div class="animated-border-wrapper">
+                            <img src="assets/professional_pic.jpg" 
+                                 alt="Professional Photo" 
+                                 class="img-fluid rounded-circle shadow-lg professional-photo" 
+                                 style="max-width: 350px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROJECTS SECTION
+         Interactive carousel showcasing portfolio projects
+         Features: Bootstrap carousel with custom indicators,
+         project mockups, detailed descriptions, and external links
+    ========================================= -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">My Projects</h2>
+                    <p class="lead">Professional and academic projects showcasing my skills in UI/UX design and web development.</p>
+                </div>
+            </div>
+            
+            <!-- Projects Carousel Container -->
+            <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+                
+                <!-- Carousel Content Slides -->
+                <div class="carousel-inner">
+                    <!-- Project 1: Mobile UI/UX Design - Rate My City App -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-9">
+                                <div class="project-slide-card shadow-lg">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="project-mockup-container">
+                                                <div class="mobile-mockup">
+                                                    <div class="mobile-screen">
+                                                        <div class="mobile-content">
+                                                            <div class="mobile-header">
+                                                                <h3 class="mobile-title">Rate My City</h3>
+                                                            </div>
+                                                            <div class="rating-section">
+                                                                <h4>Rate the community</h4>
+                                                                <p class="rating-description">Rating your community and comparing your responses to regional and nation-wide summaries.</p>
+                                                                <div class="star-rating">
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star">★</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rating-section">
+                                                                <h4>Rate the building</h4>
+                                                                <p class="rating-description">Consider the building's amenities, cleanliness, and age.</p>
+                                                                <div class="star-rating">
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star">★</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rating-section">
+                                                                <h4>Rate the location</h4>
+                                                                <p class="rating-description">Consider the location's convenience and safety.</p>
+                                                                <div class="star-rating">
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star">★</span>
+                                                                    <span class="star">★</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="rating-section">
+                                                                <h4>Rate the city</h4>
+                                                                <p class="rating-description">Consider the successful towns, cities and societies that respect and celebrate diversity.</p>
+                                                                <div class="star-rating">
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                    <span class="star filled">★</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="project-details">
+                                                <div class="project-category">Mobile UI/UX Design</div>
+                                                <h3 class="project-title">Rate My City</h3>
+                                                <p class="project-description">
+                                                    A comprehensive mobile application designed for community rating and feedback. 
+                                                    The app allows users to rate various aspects of their community including buildings, 
+                                                    locations, and overall city experience with an intuitive star-rating system.
+                                                </p>
+                                                <div class="project-features">
+                                                    <h5>Key Features:</h5>
+                                                    <ul>
+                                                        <li>Interactive star rating system</li>
+                                                        <li>Community feedback collection</li>
+                                                        <li>Regional comparison analytics</li>
+                                                        <li>Clean, modern mobile interface</li>
+                                                        <li>User-friendly navigation</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="project-tech-stack">
+                                                    <span class="tech-badge">UI/UX Design</span>
+                                                    <span class="tech-badge">Figma</span>
+                                                    <span class="tech-badge">Mobile Design</span>
+                                                    <span class="tech-badge">User Research</span>
+                                                </div>
+                                                <div class="project-links">
+                                                    <a href="https://www.figma.com/design/Xj0IZ4yEnANfAuqaPa7VA8/Mobile-UI-UX?node-id=0-1&t=mh2fq5FIdApo1Yn3-1" 
+                                                       class="btn btn-primary me-2" target="_blank">
+                                                        <i class="bi bi-eye"></i> View Design
+                                                    </a>
+                                                    <a href="#" class="btn btn-outline-primary">
+                                                        <i class="bi bi-file-earmark-text"></i> Case Study
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: Website Development -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-9">
+                                <div class="project-slide-card shadow-lg">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="project-mockup-container">
+                                                <div class="website-mockup">
+                                                    <div class="browser-frame">
+                                                        <div class="browser-header">
+                                                            <div class="browser-buttons">
+                                                                <span class="browser-btn close"></span>
+                                                                <span class="browser-btn minimize"></span>
+                                                                <span class="browser-btn maximize"></span>
+                                                            </div>
+                                                            <div class="browser-url">ratemycity.com</div>
+                                                        </div>
+                                                        <div class="website-content">
+                                                            <div class="website-header">
+                                                                <h2>Rate My City</h2>
+                                                                <p>Search and compare with confidence.</p>
+                                                            </div>
+                                                            <div class="search-section">
+                                                                <h3>What can we help you find?</h3>
+                                                                <div class="search-bar">
+                                                                    <input type="text" placeholder="Search locations..." readonly>
+                                                                    <button class="search-btn">🔍</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="features-grid">
+                                                                <div class="feature-card">
+                                                                    <div class="feature-icon">🏢</div>
+                                                                    <h4>Write an anonymous review</h4>
+                                                                    <p>Share your community experience</p>
+                                                                </div>
+                                                                <div class="feature-card">
+                                                                    <div class="feature-icon">📍</div>
+                                                                    <h4>Rate the location</h4>
+                                                                    <p>Convenience and safety ratings</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="contact-info">
+                                                                <div class="contact-item">
+                                                                    <span class="contact-icon">📞</span>
+                                                                    <span>123-4567 890</span>
+                                                                </div>
+                                                                <div class="contact-item">
+                                                                    <span class="contact-icon">✉️</span>
+                                                                    <span>contact@ratemycity.com</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="project-details">
+                                                <div class="project-category">Web Development</div>
+                                                <h3 class="project-title">Rate My City Website</h3>
+                                                <p class="project-description">
+                                                    A comprehensive web platform that complements the mobile app, providing users 
+                                                    with a full-featured website for community ratings and reviews. Features a 
+                                                    clean, professional design with intuitive navigation and comprehensive functionality.
+                                                </p>
+                                                <div class="project-features">
+                                                    <h5>Key Features:</h5>
+                                                    <ul>
+                                                        <li>Responsive web design</li>
+                                                        <li>Advanced search functionality</li>
+                                                        <li>Anonymous review system</li>
+                                                        <li>Contact integration</li>
+                                                        <li>FAQ section</li>
+                                                        <li>Social media integration</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="project-tech-stack">
+                                                    <span class="tech-badge">HTML5</span>
+                                                    <span class="tech-badge">CSS3</span>
+                                                    <span class="tech-badge">JavaScript</span>
+                                                    <span class="tech-badge">Responsive Design</span>
+                                                </div>
+                                                <div class="project-links">
+                                                    <a href="https://www.figma.com/proto/TOVbZ2n1TYp2baMtcJZBzo/Final-Company-Website?node-id=5-172&starting-point-node-id=5%3A172&t=jZ8PqdfuccHVSXe2-1" 
+                                                       class="btn btn-primary me-2" target="_blank">
+                                                        <i class="bi bi-eye"></i> View Prototype
+                                                    </a>
+                                                    <a href="#" class="btn btn-outline-primary">
+                                                        <i class="bi bi-github"></i> GitHub Repo
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: Dealer Responsive Website -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-9">
+                                <div class="project-slide-card shadow-lg">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="project-mockup-container">
+                                                <div class="project-mockup">
+                                                    <iframe src="https://sy1zy1gy.github.io/dealer-responsive-website/" 
+                                                            title="Dealer Responsive Website Preview" 
+                                                            class="project-iframe"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="project-details">
+                                                <div class="project-category">Web Development</div>
+                                                <h3 class="project-title">Dealer Responsive Website</h3>
+                                                <p class="project-description">
+                                                    A fully responsive motorcycle dealer website built with Bootstrap framework. 
+                                                    Features modern design, vehicle showcases, and optimized user experience across all devices.
+                                                </p>
+                                                <div class="project-features">
+                                                    <h5>Key Features:</h5>
+                                                    <ul>
+                                                        <li>Responsive Bootstrap design</li>
+                                                        <li>Vehicle inventory showcase</li>
+                                                        <li>Mobile-first approach</li>
+                                                        <li>Clean and modern UI/UX</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="project-tech-stack">
+                                                    <span class="tech-badge">HTML5</span>
+                                                    <span class="tech-badge">CSS3</span>
+                                                    <span class="tech-badge">Bootstrap</span>
+                                                    <span class="tech-badge">JavaScript</span>
+                                                    <span class="tech-badge">Responsive Design</span>
+                                                </div>
+                                                <div class="project-links">
+                                                    <a href="https://sy1zy1gy.github.io/dealer-responsive-website/" 
+                                                       target="_blank" 
+                                                       class="btn btn-primary me-2">
+                                                        <i class="bi bi-eye"></i> Live Demo
+                                                    </a>
+                                                    <a href="https://github.com/Sy1Zy1Gy/dealer-responsive-website" 
+                                                       target="_blank" 
+                                                       class="btn btn-outline-primary">
+                                                        <i class="bi bi-github"></i> View Code
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4: Coming Soon Placeholder -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-9">
+                                <div class="project-slide-card shadow-lg coming-soon">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="project-mockup-container">
+                                                <div class="coming-soon-mockup">
+                                                    <div class="coming-soon-content">
+                                                        <div class="coming-soon-icon">
+                                                            <i class="bi bi-gear"></i>
+                                                        </div>
+                                                        <h3>Coming Soon</h3>
+                                                        <p>Another project in the works</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="project-details">
+                                                <div class="project-category">Planning Phase</div>
+                                                <h3 class="project-title">Future Innovation</h3>
+                                                <p class="project-description">
+                                                    Another exciting project is in the planning phase. This will showcase additional 
+                                                    skills and technologies as I continue to grow and develop as a web developer.
+                                                </p>
+                                                <div class="project-features">
+                                                    <h5>Planned Features:</h5>
+                                                    <ul>
+                                                        <li>Advanced functionality</li>
+                                                        <li>Scalable architecture</li>
+                                                        <li>Performance optimization</li>
+                                                        <li>Accessibility compliance</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="project-tech-stack">
+                                                    <span class="tech-badge coming-soon-badge">Coming Soon</span>
+                                                </div>
+                                                <div class="project-links">
+                                                    <button class="btn btn-secondary" disabled>
+                                                        <i class="bi bi-clock"></i> In Planning
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <!-- Carousel Indicators - Horizontal Line Style -->
+            <div class="projects-carousel-indicators">
+                <div class="projects-indicator-line active" tabindex="0" role="button" aria-label="Go to slide 1"></div>
+                <div class="projects-indicator-line" tabindex="0" role="button" aria-label="Go to slide 2"></div>
+                <div class="projects-indicator-line" tabindex="0" role="button" aria-label="Go to slide 3"></div>
+                <div class="projects-indicator-line" tabindex="0" role="button" aria-label="Go to slide 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Certifications</h2>
+                    <p class="lead">Professional Certifications and Achievements.</p>
+                </div>
+            </div>
+            
+            <!-- Certificates Carousel -->
+            <div id="certificatesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                
+                <!-- Carousel Inner -->
+                <div class="carousel-inner">
+                    <!-- Certificate 1: Complete Web Development Bootcamp -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-8">
+                                <div class="certificate-card shadow-lg" 
+                                     data-certificate="TheCompleteWebDevBootcamp_Cert.jpg"
+                                     data-title="The Complete Web Development Bootcamp"
+                                     data-issuer="Udemy"
+                                     data-date="2024"
+                                     style="cursor: pointer;"
+                                     tabindex="0"
+                                     role="button"
+                                     aria-label="View The Complete Web Development Bootcamp certificate details">
+                                    <div class="row g-0">
+                                        <div class="col-md-6">
+                                            <img src="assets/TheCompleteWebDevBootcamp_Cert.jpg" 
+                                                 class="img-fluid certificate-image h-100 w-100" 
+                                                 alt="The Complete Web Development Bootcamp Certificate"
+                                                 style="object-fit: cover;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="certificate-info p-4 h-100 d-flex flex-column">
+                                                <h4 class="certificate-title mb-3">The Complete Web Development Bootcamp</h4>
+                                                <p class="certificate-issuer text-muted mb-2"><strong>Issued by:</strong> Udemy</p>
+                                                <p class="certificate-date text-muted mb-3"><strong>Completed:</strong> 2024</p>
+                                                <p class="certificate-description flex-grow-1 mb-4">
+                                                    Comprehensive full-stack web development course covering HTML, CSS, JavaScript, Node.js, React, and database technologies. This intensive bootcamp provided hands-on experience in building modern web applications.
+                                                </p>
+                                                <div class="certificate-skills">
+                                                    <span class="badge bg-primary me-2 mb-2">HTML5</span>
+                                                    <span class="badge bg-primary me-2 mb-2">CSS3</span>
+                                                    <span class="badge bg-primary me-2 mb-2">JavaScript</span>
+                                                    <span class="badge bg-primary me-2 mb-2">React</span>
+                                                    <span class="badge bg-primary me-2 mb-2">Node.js</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 2: Accenture Certificate -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-8">
+                                <div class="certificate-card shadow-lg" 
+                                     data-certificate="accenture_cert.jpg"
+                                     data-title="Accenture Professional Certification"
+                                     data-issuer="Accenture"
+                                     data-date="2024"
+                                     style="cursor: pointer;"
+                                     tabindex="0"
+                                     role="button"
+                                     aria-label="View Accenture Professional Certification details">
+                                    <div class="row g-0">
+                                        <div class="col-md-6">
+                                            <img src="assets/accenture_cert.jpg" 
+                                                 class="img-fluid certificate-image h-100 w-100" 
+                                                 alt="Accenture Professional Certification"
+                                                 style="object-fit: cover;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="certificate-info p-4 h-100 d-flex flex-column">
+                                                <h4 class="certificate-title mb-3">Accenture Professional Certification</h4>
+                                                <p class="certificate-issuer text-muted mb-2"><strong>Issued by:</strong> Accenture</p>
+                                                <p class="certificate-date text-muted mb-3"><strong>Completed:</strong> 2024</p>
+                                                <p class="certificate-description flex-grow-1 mb-4">
+                                                    Professional certification demonstrating expertise in consulting, technology solutions, and digital transformation practices. This certification validates skills in enterprise-level project management and strategic technology implementation.
+                                                </p>
+                                                <div class="certificate-skills">
+                                                    <span class="badge bg-primary me-2 mb-2">Consulting</span>
+                                                    <span class="badge bg-primary me-2 mb-2">Digital Strategy</span>
+                                                    <span class="badge bg-primary me-2 mb-2">Technology Solutions</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 3: Java 17 Masterclass -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-8">
+                                <div class="certificate-card shadow-lg" 
+                                     data-certificate="java17-Masterclass_Cert.jpg"
+                                     data-title="Java 17 Masterclass"
+                                     data-issuer="Udemy"
+                                     data-date="2024"
+                                     style="cursor: pointer;"
+                                     tabindex="0"
+                                     role="button"
+                                     aria-label="View Java 17 Masterclass certificate details">
+                                    <div class="row g-0">
+                                        <div class="col-md-6">
+                                            <img src="assets/java17-Masterclass_Cert.jpg" 
+                                                 class="img-fluid certificate-image h-100 w-100" 
+                                                 alt="Java 17 Masterclass Certificate"
+                                                 style="object-fit: cover;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="certificate-info p-4 h-100 d-flex flex-column">
+                                                <h4 class="certificate-title mb-3">Java 17 Masterclass</h4>
+                                                <p class="certificate-issuer text-muted mb-2"><strong>Issued by:</strong> Udemy</p>
+                                                <p class="certificate-date text-muted mb-3"><strong>Completed:</strong> 2024</p>
+                                                <p class="certificate-description flex-grow-1 mb-4">
+                                                    Advanced Java programming course covering Java 17 features, object-oriented programming, and modern development practices. This comprehensive course included advanced topics like streams, lambda expressions, and design patterns.
+                                                </p>
+                                                <div class="certificate-skills">
+                                                    <span class="badge bg-primary me-2 mb-2">Java 17</span>
+                                                    <span class="badge bg-primary me-2 mb-2">OOP</span>
+                                                    <span class="badge bg-primary me-2 mb-2">Data Structures</span>
+                                                    <span class="badge bg-primary me-2 mb-2">Algorithms</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 4: Spring Boot 3 & Hibernate -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-xl-8">
+                                <div class="certificate-card shadow-lg" 
+                                     data-certificate="springBoot3_Hibernate_Cert.jpg"
+                                     data-title="Spring Boot 3 & Hibernate"
+                                     data-issuer="Udemy"
+                                     data-date="2024"
+                                     style="cursor: pointer;"
+                                     tabindex="0"
+                                     role="button"
+                                     aria-label="View Spring Boot 3 & Hibernate certificate details">
+                                    <div class="row g-0">
+                                        <div class="col-md-6">
+                                            <img src="assets/springBoot3_Hibernate_Cert.jpg" 
+                                                 class="img-fluid certificate-image h-100 w-100" 
+                                                 alt="Spring Boot 3 & Hibernate Certificate"
+                                                 style="object-fit: cover;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="certificate-info p-4 h-100 d-flex flex-column">
+                                                <h4 class="certificate-title mb-3">Spring Boot 3 & Hibernate</h4>
+                                                <p class="certificate-issuer text-muted mb-2"><strong>Issued by:</strong> Udemy</p>
+                                                <p class="certificate-date text-muted mb-3"><strong>Completed:</strong> 2024</p>
+                                                <p class="certificate-description flex-grow-1 mb-4">
+                                                    Comprehensive course on Spring Boot 3 framework and Hibernate ORM for building enterprise-level Java applications. Covered advanced topics including microservices architecture, security, and database optimization.
+                                                </p>
+                                                <div class="certificate-skills">
+                                                    <span class="badge bg-primary me-2 mb-2">Spring Boot 3</span>
+                                                    <span class="badge bg-primary me-2 mb-2">Hibernate</span>
+                                                    <span class="badge bg-primary me-2 mb-2">JPA</span>
+                                                    <span class="badge bg-primary me-2 mb-2">REST APIs</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <!-- Carousel Indicators - Horizontal Line Style -->
+            <div class="carousel-indicators-horizontal">
+                <div class="indicator-line active" tabindex="0" role="button" aria-label="Go to slide 1"></div>
+                <div class="indicator-line" tabindex="0" role="button" aria-label="Go to slide 2"></div>
+                <div class="indicator-line" tabindex="0" role="button" aria-label="Go to slide 3"></div>
+                <div class="indicator-line" tabindex="0" role="button" aria-label="Go to slide 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="certificateModalLabel">Certificate Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body - Certificate Image and Details -->
+                <div class="modal-body text-center">
+                    <img id="modalCertificateImage" src="" alt="Certificate" class="img-fluid rounded shadow">
+                    <div class="mt-3">
+                        <h4 id="modalCertificateTitle" class="mb-2"></h4>
+                        <p id="modalCertificateIssuer" class="text-muted mb-1"></p>
+                        <p id="modalCertificateDate" class="text-muted"></p>
+                    </div>
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <!-- Section Header -->
+                    <h2 class="display-4 fw-bold mb-3">Get In Touch</h2>
+                    <p class="lead mb-5 text-muted">
+                        I'm always interested in new opportunities and exciting projects. 
+                        Let's connect and discuss how we can work together!
+                    </p>
+                    
+                    <!-- Modern Contact Links -->
+                    <div class="contact-links-modern">
+                        <!-- Email Contact -->
+                        <div class="contact-link-item">
+                            <a href="mailto:sherwinestrada0425@gmail.com" class="contact-link">
+                                <i class="bi bi-envelope-fill contact-icon"></i>
+                                <div class="contact-info">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">sherwinestrada0425@gmail.com</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- LinkedIn Profile -->
+                        <div class="contact-link-item">
+                            <a href="https://www.linkedin.com/in/sherwin-estrada/" target="_blank" class="contact-link">
+                                <i class="bi bi-linkedin contact-icon"></i>
+                                <div class="contact-info">
+                                    <span class="contact-label">LinkedIn</span>
+                                    <span class="contact-value">linkedin.com/in/sherwin-estrada</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- GitHub Profile -->
+                        <div class="contact-link-item">
+                            <a href="https://github.com/Sy1Zy1Gy" target="_blank" class="contact-link">
+                                <i class="bi bi-github contact-icon"></i>
+                                <div class="contact-info">
+                                    <span class="contact-label">GitHub</span>
+                                    <span class="contact-value">github.com/Sy1Zy1Gy</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Copyright Information -->
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Sherwin Estrada. All rights reserved.</p>
+                </div>
+                <!-- Back to Top Link -->
+                <div class="col-md-6 text-md-end">
+                    <a href="#home" class="text-white text-decoration-none me-3">
+                        <i class="bi bi-arrow-up-circle"></i> Back to Top
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
