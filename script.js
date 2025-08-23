@@ -794,6 +794,9 @@ class ProjectsCarousel {
             
             // Add responsive behavior
             this.addResponsiveBehavior(carouselElement);
+            
+            // Add custom indicator functionality
+            this.addCustomIndicators(carouselElement);
         }
     }
     
@@ -893,6 +896,54 @@ class ProjectsCarousel {
         
         // Update on resize
         window.addEventListener('resize', debounce(updateCarouselBehavior, 250));
+    }
+    
+    addCustomIndicators(carouselElement) {
+        const indicators = document.querySelectorAll('.projects-indicator-line');
+        
+        if (indicators.length > 0) {
+            // Add click event listeners to indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    if (this.carousel) {
+                        this.carousel.to(index);
+                    }
+                });
+                
+                // Add keyboard support for indicators
+                indicator.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        if (this.carousel) {
+                            this.carousel.to(index);
+                        }
+                    }
+                });
+            });
+            
+            // Update active indicator when carousel slides
+            carouselElement.addEventListener('slid.bs.carousel', (e) => {
+                const activeIndex = Array.from(e.target.querySelectorAll('.carousel-item')).indexOf(e.target.querySelector('.carousel-item.active'));
+                
+                // Remove active class from all indicators
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                // Add active class to current indicator
+                if (indicators[activeIndex]) {
+                    indicators[activeIndex].classList.add('active');
+                }
+            });
+            
+            // Set initial active indicator
+            const activeCarouselItem = carouselElement.querySelector('.carousel-item.active');
+            if (activeCarouselItem) {
+                const activeIndex = Array.from(carouselElement.querySelectorAll('.carousel-item')).indexOf(activeCarouselItem);
+                if (indicators[activeIndex]) {
+                    indicators.forEach(indicator => indicator.classList.remove('active'));
+                    indicators[activeIndex].classList.add('active');
+                }
+            }
+        }
     }
 }
 
